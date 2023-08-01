@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <!-- linking style.css -->
+    <link rel="stylesheet" href="./_style.css">
+    <!-- linking fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- whole container div -->
+    <div class="wrapper">
+
+        <!-- site branding -->
+        <h1 id="branding">Sabin's Weather App</h1>
+
+        <!-- information box -->
+        <div class="data-container">
+            <!-- city name -->
+            <h1 id="city-name">-</h1>
+            <!-- date -->
+            <p id="day-date">-</p>
+
+            <!-- temperature icon and value -->
+            <div class="condition">
+                <img src="" alt="-" id="condition-icon">
+                <p id="temp">-</p>
+            </div>
+            
+            <!-- condition of weather -->
+            <p id="main-condition">-</p>
+
+            <!-- atmosphere details -->
+            <div class="details">
+                <p class="detail-item">Pressure: <span id="pressure">-</span> hPa</p>
+                <p class="detail-item">Humidity: <span id="humidity">-</span>%</p>
+                <p class="detail-item">Wind: <span id="wind">-</span> m/s <span id="wind-direction">-</span>&#176;</p>
+            </div>
+            
+            <!-- search and gps button -->
+            <div class="extended-btns">
+
+                <!-- search button and input -->
+                <div class="search-btn">
+                    <input type="text" name="search" placeholder="Search city" class="input" title="search by city" id="inputSearch">
+                    <i class="fas fa-search btn" id="searchBtn" onclick="generateData(document.getElementById('inputSearch').value)"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            &copy;Sabin Lohani | 2022
+        </footer>
+        
+    </div>
+    
+    <script src="./_script.js"></script>
+</body>
+</html>
